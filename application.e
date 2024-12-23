@@ -13,8 +13,8 @@ feature
         print(bloom_filter.hash("a").out + "%N")
         bloom_filter.add("a")
         
-        io.put_string("Contains k: ")
-        io.put_boolean(bloom_filter.contains("k"))
+        io.put_string("Might contains k: ")
+        io.put_boolean(bloom_filter.mightContains("k"))
         io.put_new_line
 
 

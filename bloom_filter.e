@@ -24,7 +24,7 @@ feature
         presence[index] := True
     end
 
-    contains (item:G): BOOLEAN
+    mightContains (item:G): BOOLEAN
         -- Check if the item is in the filter.
     local
         index: INTEGER

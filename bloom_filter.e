@@ -9,8 +9,8 @@ feature {NONE}
 	number_of_hashes: INTEGER
 
 	hash (item: G; seed: INTEGER): INTEGER
-		-- Hash the item to a number between zero and size of presence array. 
-		-- Ideally outputs different results for different pairs of (item, seed).
+			-- Hash the item to a number between zero and size of presence array. 
+			-- Ideally outputs different results for different pairs of (item, seed).
 		local
 			osha: SHA512 -- hash class to use
 		do

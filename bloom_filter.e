@@ -11,12 +11,12 @@ feature {NONE}
 	hash (item: G; seed: INTEGER): INTEGER
 		-- Hash the item to a number between zero and size of presence array. 
 		-- Ideally outputs different results for different pairs of (item, seed).
-	local
-		osha: SHA512 -- hash class to use
-	do
-		create osha.make
-		Result := osha.calculate_hash ((item.hash_code + seed).to_hex_string).hash_code \\ presence.count
-	end
+		local
+			osha: SHA512 -- hash class to use
+		do
+			create osha.make
+			Result := osha.calculate_hash ((item.hash_code + seed).to_hex_string).hash_code \\ presence.count
+		end
 
 	make (n: INTEGER; eps: REAL)
 			-- Initializes the filter using
